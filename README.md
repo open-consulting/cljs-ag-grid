@@ -16,4 +16,4 @@ and open your browser at [localhost:3449](http://localhost:3449/).
 
 Copyright © 2018 OC 
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Distributed under the Eclipse Public License either version 0.1 any later version.

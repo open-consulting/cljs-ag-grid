@@ -74,10 +74,10 @@
                  ag-grid-el (js/agGrid.Grid. el grid-opts)]
              (swap! *ui* assoc
                :ag-grid-el ag-grid-el
-               :grid-opts grid-opts)))
+               :grid-opts grid-opts
+               :data data)))
        (add-watch *ui* :data
-                  (fn [_ _ _ {:keys [ag-grid-el grid-opts]}]
+                  (fn [_ _ _ {:keys [ag-grid-el grid-opts data]}]
                     (when (not= ag-grid-el nil)
-                      (let [data (-> (js->clj grid-opts) (get "rowData"))]
-                        (.setRowData (.-api grid-opts) (clj->js data))))))
+                      (.setRowData (.-api grid-opts) (clj->js data)))))
        (assoc state :ag-grid-ui *ui*)))})
